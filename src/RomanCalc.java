@@ -26,4 +26,21 @@ public class RomanCalc extends Calculator {
         }
         throw new IllegalArgumentException("Unsupported operand " + operand + ".");
     }
+    @Override
+    public String intToRoman (int num) {
+
+
+        String[] hundreds = {"", "C"};
+
+
+        String [] tens = {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};
+
+
+        String [] units = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
+
+
+        return hundreds [num/ 100] + tens [(num% 100) / 10]+ units [num% 10];
+
+
+    }
 }

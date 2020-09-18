@@ -6,4 +6,8 @@ public class ArabicCalc extends Calculator {
         }
         return Integer.parseInt(operand);
     }
+    @Override
+    public String intToRoman (int num) {
+        return Integer.toString(num);
+    }
 }
